@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3673AE33-27D2-8280-8D1A-BEC0B09A1956}</ProjectGuid>
+    <ProjectGuid>{EEFC5D66-48AC-A82F-9B2B-76BF36EDF48A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\CenterFlame.cs" />
     <Compile Include="Assets\Scripts\Manager\TimingManager.cs" />
+    <Compile Include="Assets\Scripts\DeadZone.cs" />
     <Compile Include="Assets\Scripts\Menu\Result.cs" />
     <Compile Include="Assets\Scripts\Manager\StageManager.cs" />
     <Compile Include="Assets\Scripts\Controller\CameraController.cs" />
@@ -68,7 +69,6 @@
     <Compile Include="Assets\Scripts\Manager\NoteManager.cs" />
     <Compile Include="Assets\Scripts\Plate\GoalPlate.cs" />
     <Compile Include="Assets\Scripts\Manager\ComboManager.cs" />
-    <Compile Include="Assets\Scripts\DeadZone.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
