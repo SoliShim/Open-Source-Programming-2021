@@ -56,11 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\BackgroundVideoController.cs" />
+    <Compile Include="Assets\Scripts\NoteObject.cs" />
+    <Compile Include="Assets\Scripts\CenterColiderController.cs" />
     <Compile Include="Assets\Scripts\ButtonScript.cs" />
     <Compile Include="Assets\Scripts\BeatScroller.cs" />
-    <Compile Include="Assets\Scripts\NoteObject.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\NoteMaker.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
