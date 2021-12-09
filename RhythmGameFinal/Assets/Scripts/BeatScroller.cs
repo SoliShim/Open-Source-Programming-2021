@@ -77,8 +77,33 @@ public class BeatScroller : MonoBehaviour
 
 
             }
+        }
 
-            
+
+        if (this.gameObject.transform.position == new Vector3(0f, 0f, 0f)) //노트가 가운데에 오면
+        {
+            switch (quad)
+            {
+                case 1: //1사분면
+                    transform.position = new Vector3(18f, 18f, 0f);
+                    break;
+                case 2: //2사분면
+                    transform.position = new Vector3(-18f, 18f, 0f);
+                    break;
+                case 3: //3사분면
+                    transform.position = new Vector3(-18f, -18f, 0f);
+                    break;
+                case 4: //4사분면
+                    transform.position = new Vector3(18f, -18f, 0f);
+                    break;
+            }
+            gameObject.SetActive(true);
+
         }
     }
+    /*
+    private void IfCenter() //노트 재활용. 노트가 가운데에 오면,
+    {   
+    }
+    */
 }
