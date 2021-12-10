@@ -7,10 +7,15 @@ const int d_btnLU=3;
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(d_btnLU, INPUT);
-  digitalWrite(d_btnLU, HIGH);
+  digitalWrite(d_btnLU, HIGH);cd 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  static boolean st_btnLU = HIGH;
 
+  if(btnStatCk_(LU)){
+    btnStatSw_(LU);
+    if (btnPress_(LU))  digitalWrite(LED_BUILTIN, HIGH);
+    else        digitalWrite(LED_BUILTIN, LOW);
+  }
 }
