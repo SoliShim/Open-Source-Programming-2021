@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
     }
     public void NoteHit()
     {
-        Debug.Log("Hit On Time");
+        //Debug.Log("Hit On Time");
         
         /*
         multiplierTracker++;
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
 
     public void NoteMissed()
     {
-        Debug.Log("Missed Note");
+        //Debug.Log("Missed Note");
 
     }
 }

@@ -8,9 +8,11 @@ public class NoteObject : MonoBehaviour
     public bool canBePressed;
     public KeyCode KeyToPress;
 
+    //private SpriteRenderer noteRenderer= self;
+
     void Start()
     {
-
+        //renderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -21,6 +23,7 @@ public class NoteObject : MonoBehaviour
             {
                 GameManager.instance.NoteHit();
                 gameObject.SetActive(false);
+                //sprite.enabled = false;
                 //Destroy(gameObject);
             }
         }

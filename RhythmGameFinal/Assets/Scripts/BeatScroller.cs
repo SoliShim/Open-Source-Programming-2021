@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using System.Diagnostics;//절댓값사용
+
 
 public class BeatScroller : MonoBehaviour
 {
@@ -9,7 +11,10 @@ public class BeatScroller : MonoBehaviour
     public float beatTempo;
     public bool hasStarted;
 
-    public int quad=0; 
+    public int quad=0; //사분면
+
+
+    public float calibration= 0.4006759f;//보정 값
 
     void Start()
     {
@@ -79,31 +84,31 @@ public class BeatScroller : MonoBehaviour
             }
         }
 
-
-        if (this.gameObject.transform.position == new Vector3(0f, 0f, 0f)) //노트가 가운데에 오면
+        
+        if (this.gameObject.transform.position.sqrMagnitude < 0.5043f)
         {
+            //Debug.Log("ACTIVATED");
+            //gameObject.SetActive(true);
             switch (quad)
             {
                 case 1: //1사분면
-                    transform.position = new Vector3(18f, 18f, 0f);
+                    transform.position = new Vector3(20f+calibration, 20f + calibration, 0f);
                     break;
                 case 2: //2사분면
-                    transform.position = new Vector3(-18f, 18f, 0f);
+                    transform.position = new Vector3(-20f - calibration, 20f + calibration, 0f);
                     break;
                 case 3: //3사분면
-                    transform.position = new Vector3(-18f, -18f, 0f);
+                    transform.position = new Vector3(-20f - calibration, -20f - calibration, 0f);
                     break;
                 case 4: //4사분면
-                    transform.position = new Vector3(18f, -18f, 0f);
+                    transform.position = new Vector3(20f + calibration, -20f - calibration, 0f);
                     break;
             }
-            gameObject.SetActive(true);
-
         }
+        
     }
-    /*
+   
     private void IfCenter() //노트 재활용. 노트가 가운데에 오면,
     {   
     }
-    */
 }

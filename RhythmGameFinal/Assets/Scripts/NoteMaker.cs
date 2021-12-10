@@ -16,14 +16,14 @@ public class NoteMaker : MonoBehaviour
 
     //노래 편집********************************************************************
     //인티저 값으로 활성 비활성 값 넣기
-    private int[] noteAry1 ={ 1,1,1,1,1,1,1,1
+    private int[] noteAry1 ={ 1,1,1,1,1,1,1,1,1,1
     };          
-    private int[] noteAry2 ={ 1,1,1,1,1,1,1,1
+    private int[] noteAry2 ={ 1,1,1,1,1,1,1,1,1,1
 
     };          
-    private int[] noteAry3 ={ 1,1,1,1,1,1,1,1
+    private int[] noteAry3 ={ 1,1,1,1,1,1,1,1,1,1
     };          
-    private int[] noteAry4 ={ 1,1,1,1,1,1,1,1
+    private int[] noteAry4 ={ 1,1,1,1,1,1,1,1,1,1
     };
 
     //***************************************************************************
@@ -35,10 +35,10 @@ public class NoteMaker : MonoBehaviour
     private int tmp2;
     private int tmp3;
     private int tmp4;
-    
+
     //public bool[] used;
 
-
+    private int cnt=0;
 
 
     void Start()
@@ -78,12 +78,11 @@ public class NoteMaker : MonoBehaviour
         
         
     }
-
     void Update()
     {
-        
-        
-        
+
+
+
     }
     
     
