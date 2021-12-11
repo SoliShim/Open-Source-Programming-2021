@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\NoteMaker.cs" />
     <Compile Include="Assets\Scripts\ButtonScript.cs" />
     <Compile Include="Assets\Scripts\BeatScroller.cs" />
+    <Compile Include="Assets\Scripts\EffectObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

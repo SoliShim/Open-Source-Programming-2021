@@ -16,18 +16,23 @@ public class GameManager : MonoBehaviour
     //점수
     public int currentScore;
     public int scorePerNote = 100;
+    public int scorePerGoodNote = 125;
+    public int scorePerPerfectNote = 150;
 
     //멀티플라이어
-    //public int currentMultiplier;
-    //public int multiplierTracker;
-    //public int[] multiplierThersholds;
+    public int currentMultiplier;
+    public int multiplierTracker;
+    public int[] multiplierThersholds;
+
+    public float totalNotes;
+    public float normalHits;
+    public float goodHits;
+    public float perfectHits;
+    public float missedHits;
 
     //점수표시, 멀티표시
     public Text scoreText;
     public Text multiText;
-
-
-    
 
     void Start()
     {
@@ -66,9 +71,36 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score : " + currentScore;
     }
 
+    public void PerfectHit()
+    {
+        currentScore += scorePerGoodNote * currentMultiplier;
+        NoteHit();
+        perfectHits++;
+    }
+
+    public void GoodHit()
+    {
+        currentScore += scorePerGoodNote * currentMultiplier;
+        NoteHit();
+        goodHits++;
+    }
+
+    public void BadHit()
+    {
+        currentScore += scorePerNote * currentMultiplier;
+        NoteHit();
+        normalHits++;
+    }
+
     public void NoteMissed()
     {
-        //Debug.Log("Missed Note");
+        Debug.Log("Missed Note");
 
+        currentMultiplier = 1;
+        multiplierTracker = 0;
+
+        multiText.text = "Multiplier: x" + currentMultiplier;
+
+        missedHits++;
     }
 }
