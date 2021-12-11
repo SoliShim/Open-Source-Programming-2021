@@ -6,11 +6,32 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
-
-    public void SceneChange()
+    public Image Panel;
+    float time = 0f;
+    float F_time = 1f;
+    public bool scenechanged;
+    public void Fade()
     {
-        
-        SceneManager.LoadScene("Game");
+        StartCoroutine(FadeFlow());
+
     }
 
+    IEnumerator FadeFlow()
+    {
+        Panel.gameObject.SetActive(true);
+        time = 0f;
+        Color alpha = Panel.color;
+        while (alpha.a < 1f) //ÆäÀÌµå¾Æ¿ô
+        {
+            time += Time.deltaTime / F_time;
+            alpha.a = Mathf.Lerp(0, 1, time);
+            Panel.color = alpha;
+            yield return null;
+        }
+        time = 0f;
+        SceneManager.LoadScene("Game");
+
+        scenechanged = false;
+        yield return null;
+    }
 }
