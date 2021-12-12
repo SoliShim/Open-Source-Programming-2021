@@ -9,7 +9,7 @@ public class SceneHandler : MonoBehaviour
     public Image Panel;
     float time = 0f;
     float F_time = 1f;
-    public bool scenechanged;
+    
     public void Fade()
     {
         StartCoroutine(FadeFlow());
@@ -31,7 +31,6 @@ public class SceneHandler : MonoBehaviour
         time = 0f;
         SceneManager.LoadScene("Game");
 
-        scenechanged = false;
         yield return null;
     }
 }
