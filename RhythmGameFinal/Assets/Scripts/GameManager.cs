@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//점수 계산
+
+
+
 public class GameManager : MonoBehaviour
 {
     public AudioSource theMusic;

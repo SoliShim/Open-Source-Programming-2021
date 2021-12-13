@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//버튼 눌렀을 떄 이미지 바뀜
+
+
 public class ButtonScript : MonoBehaviour
 {
     private SpriteRenderer theSR;

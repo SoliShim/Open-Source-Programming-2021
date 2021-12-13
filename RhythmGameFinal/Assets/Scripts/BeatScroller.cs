@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using System.Diagnostics;//절댓값사용
+
+
+
+//노트 움직임 구현
+
 
 
 public class BeatScroller : MonoBehaviour
@@ -14,7 +18,7 @@ public class BeatScroller : MonoBehaviour
     public int quad=0; //사분면
 
 
-    public float calibration= 0.4006759f;//보정 값
+    //public float calibration= 0.4006759f;//보정 값
 
     void Start()
     {
@@ -27,6 +31,7 @@ public class BeatScroller : MonoBehaviour
 
         //스프라이트의 위치에 따라서 움직이는 방향을 다르게 설정
 
+        
         if (pos.x > 0 && pos.y > 0) //1사분면에 있을 때
         {
             quad = 1;
@@ -43,7 +48,7 @@ public class BeatScroller : MonoBehaviour
         {
             quad = 4;
         }
-
+       
 
         //Debug.Log(pos);
         //Debug.Log(pos.y);
@@ -53,38 +58,57 @@ public class BeatScroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!hasStarted)
+        switch (quad)
         {
-            
-            if(Input.anyKeyDown)
+            case 1: //1사분면
+                transform.position += new Vector3(-1f * beatTempo * Time.deltaTime, -1f * beatTempo * Time.deltaTime, 0f);
+                break;
+            case 2: //2사분면
+                transform.position += new Vector3(beatTempo * Time.deltaTime, -1f * beatTempo * Time.deltaTime, 0f);
+                break;
+            case 3: //3사분면
+                transform.position += new Vector3(beatTempo * Time.deltaTime, beatTempo * Time.deltaTime, 0f);
+                break;
+            case 4: //4사분면
+                transform.position += new Vector3(-1f * beatTempo * Time.deltaTime, beatTempo * Time.deltaTime, 0f);
+                break;
+
+
+        }
+        /*
+        if (!hasStarted)
+        {
+
+            if (Input.anyKeyDown)
             {
                 hasStarted = true;
 
             }
-                       
+
         }
         else
         {
             switch (quad)
             {
                 case 1: //1사분면
-                    transform.position += new Vector3(-1f*beatTempo * Time.deltaTime, -1f*beatTempo * Time.deltaTime, 0f);
+                    transform.position += new Vector3(-1f * beatTempo * Time.deltaTime, -1f * beatTempo * Time.deltaTime, 0f);
                     break;
                 case 2: //2사분면
-                    transform.position += new Vector3(beatTempo * Time.deltaTime, -1f*beatTempo * Time.deltaTime, 0f);
+                    transform.position += new Vector3(beatTempo * Time.deltaTime, -1f * beatTempo * Time.deltaTime, 0f);
                     break;
                 case 3: //3사분면
                     transform.position += new Vector3(beatTempo * Time.deltaTime, beatTempo * Time.deltaTime, 0f);
                     break;
                 case 4: //4사분면
-                    transform.position += new Vector3(-1f*beatTempo * Time.deltaTime, beatTempo * Time.deltaTime, 0f);
+                    transform.position += new Vector3(-1f * beatTempo * Time.deltaTime, beatTempo * Time.deltaTime, 0f);
                     break;
 
 
             }
         }
+        */
 
-        
+        /*
         if (this.gameObject.transform.position.sqrMagnitude < 0.5043f)
         {
             //Debug.Log("ACTIVATED");
@@ -105,10 +129,7 @@ public class BeatScroller : MonoBehaviour
                     break;
             }
         }
-        
+        */
     }
-   
-    private void IfCenter() //노트 재활용. 노트가 가운데에 오면,
-    {   
-    }
+
 }

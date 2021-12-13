@@ -8,7 +8,7 @@ public class NoteObject : MonoBehaviour
     public bool canBePressed;
     public KeyCode KeyToPress;
 
-    public GameObject PerfectEffect, GoodEffect, BadEffect, MissEffect;
+    public GameObject PerfectEffect, GoodEffect, BadEffect;
     //private SpriteRenderer noteRenderer= self;
 
     void Start()
@@ -27,15 +27,17 @@ public class NoteObject : MonoBehaviour
                 //sprite.enabled = false;
                 //Destroy(gameObject);
             }
+            
             if (Mathf.Abs(transform.position.y) > 2.2 && Mathf.Abs(transform.position.x) > 2.2)
             {
-
-            } else if (Mathf.Abs(transform.position.y) > 1.9 && Mathf.Abs(transform.position.x) > 1.9)
+                
+            } 
+            else if (Mathf.Abs(transform.position.y) > 1.7 && Mathf.Abs(transform.position.x) > 1.7)//1.9
             {
                 Debug.Log("Perfect!");
                 GameManager.instance.PerfectHit();
                 Instantiate(PerfectEffect, PerfectEffect.transform.position ,PerfectEffect.transform.rotation);
-            } else if (Mathf.Abs(transform.position.y) > 1.3 && Mathf.Abs(transform.position.x) > 1.3)
+            } else if (Mathf.Abs(transform.position.y) > 1.0 && Mathf.Abs(transform.position.x) > 1.0)//1.3
             {
                 Debug.Log("Good");
                 GameManager.instance.GoodHit();

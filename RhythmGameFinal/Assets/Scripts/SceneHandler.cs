@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
+//화면 페이드 아웃 제어
+
+
 public class SceneHandler : MonoBehaviour
 {
     public Image Panel;
