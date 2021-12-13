@@ -4,11 +4,11 @@
 #define btnPress_(x) ((st_btn##x) == LOW)
 #define btnStatSw_(x) ((st_btn##x) = !(st_btn##x))
 
-#define KDY_LU 'q'
-#define KEY_RU 'e'
-#define KEY_C 's'
-#define KEY_LD 'z'
-#define KEY_RD 'c'
+#define KDY_LU 'f'
+#define KEY_RU 'j'
+#define KEY_C ' '
+#define KEY_LD 'v'
+#define KEY_RD n'
 #define KEY_COIN '\n'
 
 const int d_btnLU =3;
