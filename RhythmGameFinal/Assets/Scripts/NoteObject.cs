@@ -27,15 +27,15 @@ public class NoteObject : MonoBehaviour
                 //sprite.enabled = false;
                 //Destroy(gameObject);
             }
-            if (Mathf.Abs(transform.position.y) > 2.2 && Mathf.Abs(transform.position.y) > 2.2)
+            if (Mathf.Abs(transform.position.y) > 2.2 && Mathf.Abs(transform.position.x) > 2.2)
             {
 
-            } else if (Mathf.Abs(transform.position.y) > 1.9 && Mathf.Abs(transform.position.y) > 1.9)
+            } else if (Mathf.Abs(transform.position.y) > 1.9 && Mathf.Abs(transform.position.x) > 1.9)
             {
                 Debug.Log("Perfect!");
                 GameManager.instance.PerfectHit();
                 Instantiate(PerfectEffect, PerfectEffect.transform.position ,PerfectEffect.transform.rotation);
-            } else if (Mathf.Abs(transform.position.y) > 1.3 && Mathf.Abs(transform.position.y) > 1.3)
+            } else if (Mathf.Abs(transform.position.y) > 1.3 && Mathf.Abs(transform.position.x) > 1.3)
             {
                 Debug.Log("Good");
                 GameManager.instance.GoodHit();

@@ -53,6 +53,7 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EffectObject.cs" />
     <Compile Include="Assets\Scripts\SceneHandler.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\BackgroundVideoController.cs" />
@@ -61,7 +62,6 @@
     <Compile Include="Assets\Scripts\NoteMaker.cs" />
     <Compile Include="Assets\Scripts\ButtonScript.cs" />
     <Compile Include="Assets\Scripts\BeatScroller.cs" />
-    <Compile Include="Assets\Scripts\EffectObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
