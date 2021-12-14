@@ -98,7 +98,7 @@ public class GameManager : MonoBehaviour
 
     public void NoteMissed()
     {
-        Debug.Log("Missed Note");
+        //Debug.Log("Missed Note");
 
         currentMultiplier = 1;
         multiplierTracker = 0;

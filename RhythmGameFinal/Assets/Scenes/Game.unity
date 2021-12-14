@@ -616,7 +616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d1f77362915db489486b312b99e04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MissEffect: {fileID: 6716782036341989175, guid: fbf7d5bc09eed8847b0cdb1f5aaf3ffb, type: 3}
   isCrashed: 0
 --- !u!50 &404109460
 Rigidbody2D:
@@ -1511,6 +1510,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1583,6 +1583,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cac583db0b42d54db1a36ab9af5de5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followSpeed: 15
+  cam: {fileID: 963194229}
 --- !u!1 &979244838
 GameObject:
   m_ObjectHideFlags: 0

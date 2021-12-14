@@ -57,11 +57,12 @@
     <Compile Include="Assets\Scripts\SceneHandler.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\BackgroundVideoController.cs" />
+    <Compile Include="Assets\Scripts\NoteMakerNew.cs" />
     <Compile Include="Assets\Scripts\NoteObject.cs" />
     <Compile Include="Assets\Scripts\CenterColiderController.cs" />
     <Compile Include="Assets\Scripts\ButtonScript.cs" />
     <Compile Include="Assets\Scripts\BeatScroller.cs" />
-    <Compile Include="Assets\Scripts\NoteMakerNew.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
