@@ -8,7 +8,7 @@ public class NoteObject : MonoBehaviour
     public bool canBePressed;
     public KeyCode KeyToPress;
 
-    public GameObject PerfectEffect, GoodEffect, BadEffect;
+    public GameObject PerfectEffect, GoodEffect, BadEffect, MissEffect;
     //private SpriteRenderer noteRenderer= self;
 
     void Start()
@@ -28,16 +28,16 @@ public class NoteObject : MonoBehaviour
                 //Destroy(gameObject);
             }
             
-            if (Mathf.Abs(transform.position.y) > 2.2 && Mathf.Abs(transform.position.x) > 2.2)
+            if (Mathf.Abs(transform.position.y) > 2.2)
             {
                 
             } 
-            else if (Mathf.Abs(transform.position.y) > 1.7 && Mathf.Abs(transform.position.x) > 1.7)//1.9
+            else if (Mathf.Abs(transform.position.y) > 1.7)//1.9
             {
                 Debug.Log("Perfect!");
                 GameManager.instance.PerfectHit();
                 Instantiate(PerfectEffect, PerfectEffect.transform.position ,PerfectEffect.transform.rotation);
-            } else if (Mathf.Abs(transform.position.y) > 1.0 && Mathf.Abs(transform.position.x) > 1.0)//1.3
+            } else if (Mathf.Abs(transform.position.y) > 1.0 )//1.3
             {
                 Debug.Log("Good");
                 GameManager.instance.GoodHit();
@@ -45,7 +45,7 @@ public class NoteObject : MonoBehaviour
             } else
             {
                 Debug.Log("Bad");
-                GameManager.instance.PerfectHit();
+                GameManager.instance.BadHit();
                 Instantiate(BadEffect, BadEffect.transform.position, BadEffect.transform.rotation);
             }
 
@@ -58,6 +58,17 @@ public class NoteObject : MonoBehaviour
         {
             canBePressed = true;
 
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Activator")
+        {
+            canBePressed = false;
+
+            GameManager.instance.NoteMissed();
+            Instantiate(MissEffect, MissEffect.transform.position, MissEffect.transform.rotation);
         }
     }
 }
