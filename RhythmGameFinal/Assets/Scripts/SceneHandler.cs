@@ -36,4 +36,26 @@ public class SceneHandler : MonoBehaviour
         yield return null;
     }
 
+    public void Fade2()
+    {
+        StartCoroutine(FadeOut2());
+    }
+
+    IEnumerator FadeOut2()
+    {
+        Panel.gameObject.SetActive(true);
+        time = 0f;
+        Color alpha = Panel.color;
+        while (alpha.a < 1f) //ÆäÀÌµå¾Æ¿ô
+        {
+            time += Time.deltaTime / F_time;
+            alpha.a = Mathf.Lerp(0, 1, time);
+            Panel.color = alpha;
+            yield return null;
+        }
+        time = 0f;
+        SceneManager.LoadScene("Credit");
+        yield return null;
+    }
+
 }

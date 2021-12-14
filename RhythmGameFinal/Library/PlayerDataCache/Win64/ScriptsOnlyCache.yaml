@@ -3,9 +3,11 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BeatScroller
     - ButtonScript
+    - CameraController
     - CenterColiderController
+    - EffectObject
     - GameManager
-    - NoteMaker
+    - NoteMakerNew
     - NoteObject
     - SceneHandler
     Unity.Rider.Editor.dll:
@@ -72,6 +74,10 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1578}
+    - Class: 114
+      Script: {instanceID: 1688}
+    - Class: 114
       Script: {instanceID: 1996}
     - Class: 114
       Script: {instanceID: 2064}
@@ -80,19 +86,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2400}
     - Class: 114
-      Script: {instanceID: 2562}
+      Script: {instanceID: 2518}
     - Class: 114
-      Script: {instanceID: 2688}
+      Script: {instanceID: 2564}
     - Class: 114
-      Script: {instanceID: 2748}
+      Script: {instanceID: 2690}
     - Class: 114
-      Script: {instanceID: 2780}
+      Script: {instanceID: 2750}
     - Class: 114
-      Script: {instanceID: 3144}
+      Script: {instanceID: 2782}
     - Class: 114
-      Script: {instanceID: 3196}
+      Script: {instanceID: 2850}
     - Class: 114
-      Script: {instanceID: 3532}
+      Script: {instanceID: 3198}
+    - Class: 114
+      Script: {instanceID: 3534}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -100,6 +108,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -134,8 +146,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 84
-      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -143,7 +153,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1486}
+      Script: {instanceID: 1442}
     - Class: 114
       Script: {instanceID: 1688}
     - Class: 114
@@ -155,11 +165,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2400}
     - Class: 114
-      Script: {instanceID: 2562}
+      Script: {instanceID: 2564}
     - Class: 114
-      Script: {instanceID: 2748}
+      Script: {instanceID: 2750}
     - Class: 114
-      Script: {instanceID: 2832}
+      Script: {instanceID: 2834}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -176,23 +186,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
-    - Class: 328
-      Script: {instanceID: 0}
-    - Class: 329
-      Script: {instanceID: 0}
   scriptHashData:
-  - hash:
-      serializedVersion: 2
-      Hash: 5ab533713adae59372fb3e10a585c186
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 5ab533713adae59372fb3e10a585c186
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
       Hash: 77aaaaa51f7a8d8ff333a879741e47d2
@@ -211,6 +217,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: d3bbd1f86b55a6168b664522b2cf57b3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EffectObject
   - hash:
       serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
@@ -279,7 +291,7 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
-      Hash: 69458b647b18eea7f861812aea1194f5
+      Hash: ab9ae5ad7bda6b47b82e66f140fb789f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -339,6 +351,12 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: c001051aca8671b8e3d34a7f9262674f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NoteMakerNew
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
@@ -375,7 +393,7 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: 3b0e37040e0b7eba00bb388d1f31b43e
+      Hash: 88f64ef6879d951f15b053a72bb7ce18
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NoteObject
@@ -429,6 +447,12 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: 2f1a3d23cea9a0399f20cb84d3ec400a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraController
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -469,12 +493,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
-  - hash:
-      serializedVersion: 2
-      Hash: 3e9d02d91c47567b2b02640c7857e670
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NoteMaker
   - hash:
       serializedVersion: 2
       Hash: 0f643e55fc1f4d4bbfa0823ab9f20738
@@ -549,7 +567,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 3215e5f106edd80be66455e48c77ff06
+      Hash: 4bc2179b1d975c835ae745d03dc4e244
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BeatScroller
@@ -649,20 +667,8 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PadeInout
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SceneMove
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/ADMIN/Desktop/rhythmGameFinal.exe
+  playerPath: C:/Users/shims/Desktop/rhythmGameFinal.exe
