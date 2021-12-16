@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Activator
   - Colider
+  - Collider
   layers:
   - Default
   - TransparentFX

@@ -8,7 +8,7 @@ public class NoteObject : MonoBehaviour
     public bool canBePressed;
     public KeyCode KeyToPress;
 
-    public GameObject PerfectEffect, GoodEffect, BadEffect, MissEffect;
+    public GameObject PerfectEffect, GoodEffect, BadEffect;
     //private SpriteRenderer noteRenderer= self;
 
     void Start()
@@ -20,29 +20,31 @@ public class NoteObject : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyToPress))
         {
-            if(canBePressed)  //노트 맞췄을 때 
+            if (canBePressed)  //노트 맞췄을 때 
             {
                 GameManager.instance.NoteHit();
-                gameObject.SetActive(false);            
+                gameObject.SetActive(false);
                 //sprite.enabled = false;
                 //Destroy(gameObject);
             }
-            
+
             if (Mathf.Abs(transform.position.y) > 2.2)
             {
-                
-            } 
+
+            }
             else if (Mathf.Abs(transform.position.y) > 1.7)//1.9
             {
                 Debug.Log("Perfect!");
                 GameManager.instance.PerfectHit();
-                Instantiate(PerfectEffect, PerfectEffect.transform.position ,PerfectEffect.transform.rotation);
-            } else if (Mathf.Abs(transform.position.y) > 1.0 )//1.3
+                Instantiate(PerfectEffect, PerfectEffect.transform.position, PerfectEffect.transform.rotation);
+            }
+            else if (Mathf.Abs(transform.position.y) > 1.0)//1.3
             {
                 Debug.Log("Good");
                 GameManager.instance.GoodHit();
                 Instantiate(GoodEffect, GoodEffect.transform.position, GoodEffect.transform.rotation);
-            } else
+            }
+            else if (Mathf.Abs(transform.position.y) > 0.4)
             {
                 Debug.Log("Bad");
                 GameManager.instance.BadHit();
@@ -54,10 +56,9 @@ public class NoteObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag=="Activator")
+        if (other.tag == "Activator")
         {
             canBePressed = true;
-
         }
     }
 
@@ -66,9 +67,6 @@ public class NoteObject : MonoBehaviour
         if (other.tag == "Activator")
         {
             canBePressed = false;
-
-            GameManager.instance.NoteMissed();
-            Instantiate(MissEffect, MissEffect.transform.position, MissEffect.transform.rotation);
         }
     }
 }
