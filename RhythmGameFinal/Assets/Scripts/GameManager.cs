@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public int[] multiplierThersholds;
 
     public float totalNotes;
-    public float normalHits;
+    public float badHits;
     public float goodHits;
     public float perfectHits;
     public float missedHits;
@@ -38,12 +38,17 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Text multiText;
 
+    public GameObject resultsScreen;
+    public Text badsText, goodsText, perfectsText, missesText, rankText, finalScoreText;
+
     void Start()
     {
         instance = this; // 자기 호출
         scoreText.text = "Score : 0";
-        //
-        //currentMultiplier = 1;
+        
+        currentMultiplier = 1;
+
+        totalNotes = FindObjectsOfType<NoteObject>().Length;
     }
 
 
@@ -57,6 +62,45 @@ public class GameManager : MonoBehaviour
                 theMusic.Play();
             }
         }
+        else
+        {
+            if(!theMusic.isPlaying && !resultsScreen.activeInHierarchy)
+            {
+                resultsScreen.SetActive(true);
+
+                badsText.text = "" + badHits;
+                goodsText.text = goodHits.ToString();
+                perfectsText.text = perfectHits.ToString();
+                missesText.text = "" + missedHits;
+
+                string rankVal = "F";
+                
+                if(perfectHits > 10)
+                {
+                    rankVal = "D";
+                    if(perfectHits>20)
+                    {
+                        rankVal = "C";
+                        if (perfectHits > 30)
+                        {
+                            rankVal = "B";
+                            if (perfectHits > 40)
+                            {
+                                rankVal = "A";
+                            }
+                                
+                        }      
+                    }
+                }
+
+                rankText.text = rankVal;
+
+                finalScoreText.text = currentScore.ToString();    
+            }
+
+        }
+
+
     }
     public void NoteHit()
     {
@@ -93,7 +137,7 @@ public class GameManager : MonoBehaviour
     {
         currentScore += scorePerNote * currentMultiplier;
         NoteHit();
-        normalHits++;
+        badHits++;
     }
 
     public void NoteMissed()

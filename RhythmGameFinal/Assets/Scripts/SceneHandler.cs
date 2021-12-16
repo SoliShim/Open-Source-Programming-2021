@@ -19,6 +19,13 @@ public class SceneHandler : MonoBehaviour
         StartCoroutine(FadeOut());
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            StartCoroutine(FadeOut());
+
+    }
+
     IEnumerator FadeOut()
     {
         Panel.gameObject.SetActive(true);
