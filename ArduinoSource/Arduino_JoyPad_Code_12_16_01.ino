@@ -4,12 +4,12 @@
 #define btnPress_(x) ((st_btn##x) == LOW)
 #define btnStatSw_(x) ((st_btn##x) = !(st_btn##x))
 
-#define KDY_LU 'f'
+#define KEY_LU 'f'
 #define KEY_RU 'j'
 #define KEY_C ' '
 #define KEY_LD 'v'
-#define KEY_RD n'
-#define KEY_COIN '\n'
+#define KEY_RD 'n'
+#define KEY_Coin 'c'
 
 const int d_btnLU =3;
 const int d_btnRU =4;
@@ -22,7 +22,7 @@ void setup() {
   pinMode(d_btnLU, INPUT);
   digitalWrite(d_btnLU, HIGH);
 
-  pinMode(d_btnRu, INPUT);
+  pinMode(d_btnRU, INPUT);
   digitalWrite(d_btnRU, HIGH);
 
   pinMode(d_btnC, INPUT);
