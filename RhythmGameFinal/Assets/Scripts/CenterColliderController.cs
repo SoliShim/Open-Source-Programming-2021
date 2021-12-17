@@ -22,8 +22,6 @@ public class CenterColliderController : MonoBehaviour
         if(isCrashed == true)
         {
             gameObject.SetActive(false);
-
-            
         }
 
     }
@@ -46,6 +44,7 @@ public class CenterColliderController : MonoBehaviour
             Instantiate(MissEffect, MissEffect.transform.position, MissEffect.transform.rotation);
 
         }
+
     }
 
 }

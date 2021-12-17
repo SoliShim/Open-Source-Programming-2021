@@ -55,81 +55,26 @@ public class BeatScroller : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+
+
     void Update()
     {
         switch (quad)
         {
             case 1: //1사분면
-                transform.position += new Vector3(-1f * beatTempo * Time.deltaTime, -1f * beatTempo * Time.deltaTime, 0f);
+                gameObject.transform.position += new Vector3(-1f * beatTempo * Time.deltaTime, -1f * beatTempo * Time.deltaTime, 0f);
                 break;
             case 2: //2사분면
-                transform.position += new Vector3(beatTempo * Time.deltaTime, -1f * beatTempo * Time.deltaTime, 0f);
+                gameObject.transform.position += new Vector3(beatTempo * Time.deltaTime, -1f * beatTempo * Time.deltaTime, 0f);
                 break;
             case 3: //3사분면
-                transform.position += new Vector3(beatTempo * Time.deltaTime, beatTempo * Time.deltaTime, 0f);
+                gameObject.transform.position += new Vector3(beatTempo * Time.deltaTime, beatTempo * Time.deltaTime, 0f);
                 break;
             case 4: //4사분면
-                transform.position += new Vector3(-1f * beatTempo * Time.deltaTime, beatTempo * Time.deltaTime, 0f);
+                gameObject.transform.position += new Vector3(-1f * beatTempo * Time.deltaTime, beatTempo * Time.deltaTime, 0f);
                 break;
-
-
         }
-        /*
-        if (!hasStarted)
-        {
-
-            if (Input.anyKeyDown)
-            {
-                hasStarted = true;
-
-            }
-
-        }
-        else
-        {
-            switch (quad)
-            {
-                case 1: //1사분면
-                    transform.position += new Vector3(-1f * beatTempo * Time.deltaTime, -1f * beatTempo * Time.deltaTime, 0f);
-                    break;
-                case 2: //2사분면
-                    transform.position += new Vector3(beatTempo * Time.deltaTime, -1f * beatTempo * Time.deltaTime, 0f);
-                    break;
-                case 3: //3사분면
-                    transform.position += new Vector3(beatTempo * Time.deltaTime, beatTempo * Time.deltaTime, 0f);
-                    break;
-                case 4: //4사분면
-                    transform.position += new Vector3(-1f * beatTempo * Time.deltaTime, beatTempo * Time.deltaTime, 0f);
-                    break;
-
-
-            }
-        }
-        */
-
-        /*
-        if (this.gameObject.transform.position.sqrMagnitude < 0.5043f)
-        {
-            //Debug.Log("ACTIVATED");
-            //gameObject.SetActive(true);
-            switch (quad)
-            {
-                case 1: //1사분면
-                    transform.position = new Vector3(20f+calibration, 20f + calibration, 0f);
-                    break;
-                case 2: //2사분면
-                    transform.position = new Vector3(-20f - calibration, 20f + calibration, 0f);
-                    break;
-                case 3: //3사분면
-                    transform.position = new Vector3(-20f - calibration, -20f - calibration, 0f);
-                    break;
-                case 4: //4사분면
-                    transform.position = new Vector3(20f + calibration, -20f - calibration, 0f);
-                    break;
-            }
-        }
-        */
+        
     }
 
 }

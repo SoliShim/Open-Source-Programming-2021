@@ -9,11 +9,10 @@ public class NoteObject : MonoBehaviour
     public KeyCode KeyToPress;
 
     public GameObject PerfectEffect, GoodEffect, BadEffect;
-    //private SpriteRenderer noteRenderer= self;
 
     void Start()
     {
-        //renderer = GetComponent<SpriteRenderer>();
+        
     }
 
     void Update()
@@ -24,8 +23,6 @@ public class NoteObject : MonoBehaviour
             {
                 GameManager.instance.NoteHit();
                 gameObject.SetActive(false);
-                //sprite.enabled = false;
-                //Destroy(gameObject);
             }
 
             if (Mathf.Abs(transform.position.y) > 2.2)
@@ -34,19 +31,19 @@ public class NoteObject : MonoBehaviour
             }
             else if (Mathf.Abs(transform.position.y) > 1.7)//1.9
             {
-                Debug.Log("Perfect!");
+                //Debug.Log("Perfect!");
                 GameManager.instance.PerfectHit();
                 Instantiate(PerfectEffect, PerfectEffect.transform.position, PerfectEffect.transform.rotation);
             }
             else if (Mathf.Abs(transform.position.y) > 1.0)//1.3
             {
-                Debug.Log("Good");
+                //Debug.Log("Good");
                 GameManager.instance.GoodHit();
                 Instantiate(GoodEffect, GoodEffect.transform.position, GoodEffect.transform.rotation);
             }
             else 
             {
-                Debug.Log("Bad");
+                //Debug.Log("Bad");
                 GameManager.instance.BadHit();
                 Instantiate(BadEffect, BadEffect.transform.position, BadEffect.transform.rotation);
             }
@@ -60,6 +57,8 @@ public class NoteObject : MonoBehaviour
         {
             canBePressed = true;
         }
+        
+
     }
 
     private void OnTriggerExit2D(Collider2D other)

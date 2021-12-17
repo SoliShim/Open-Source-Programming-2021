@@ -25,8 +25,8 @@ public class GameManager : MonoBehaviour
 
     //멀티플라이어
     public int currentMultiplier;
-    public int multiplierTracker;
-    public int[] multiplierThersholds;
+    //public int multiplierTracker;
+    //public int[] multiplierThersholds;
 
     public float totalNotes;
     public float badHits;
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     //점수표시, 멀티표시
     public Text scoreText;
-    public Text multiText;
+    //public Text multiText;
 
     public GameObject resultsScreen;
     public Text badsText, goodsText, perfectsText, missesText, rankText, finalScoreText;
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         instance = this; // 자기 호출
         scoreText.text = "Score : 0";
         
-        currentMultiplier = 1;
+        //currentMultiplier = 1;
 
         totalNotes = FindObjectsOfType<NoteObject>().Length;
     }
@@ -87,6 +87,10 @@ public class GameManager : MonoBehaviour
                             if (perfectHits > 40)
                             {
                                 rankVal = "A";
+                                if (perfectHits > 45)
+                                {
+                                    rankVal = "S";
+                                }
                             }
                                 
                         }      
@@ -115,27 +119,28 @@ public class GameManager : MonoBehaviour
         }
         */
 
-        currentScore += scorePerNote;
+        //currentScore += scorePerNote;
         scoreText.text = "Score : " + currentScore;
     }
 
+
     public void PerfectHit()
     {
-        currentScore += scorePerGoodNote * currentMultiplier;
+        currentScore += scorePerPerfectNote ;
         NoteHit();
         perfectHits++;
     }
 
     public void GoodHit()
     {
-        currentScore += scorePerGoodNote * currentMultiplier;
+        currentScore += scorePerGoodNote ;
         NoteHit();
         goodHits++;
     }
 
     public void BadHit()
     {
-        currentScore += scorePerNote * currentMultiplier;
+        currentScore += scorePerNote ;
         NoteHit();
         badHits++;
     }
@@ -144,10 +149,10 @@ public class GameManager : MonoBehaviour
     {
         //Debug.Log("Missed Note");
 
-        currentMultiplier = 1;
-        multiplierTracker = 0;
+        //currentMultiplier = 1;
+        //multiplierTracker = 0;
 
-        multiText.text = "Multiplier: x" + currentMultiplier;
+        //multiText.text = "Multiplier: x" + currentMultiplier;
 
         missedHits++;
     }

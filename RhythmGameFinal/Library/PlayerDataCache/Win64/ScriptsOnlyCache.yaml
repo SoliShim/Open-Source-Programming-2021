@@ -4,7 +4,7 @@ ScriptsOnlyBuild:
     - BeatScroller
     - ButtonScript
     - CameraController
-    - CenterColiderController
+    - CenterColliderController
     - EffectObject
     - GameManager
     - NoteMakerNew
@@ -32,6 +32,53 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Scenes/Credit.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1442}
+    - Class: 114
+      Script: {instanceID: 2120}
+    - Class: 114
+      Script: {instanceID: 2290}
+    - Class: 114
+      Script: {instanceID: 2402}
+    - Class: 114
+      Script: {instanceID: 2566}
+    - Class: 114
+      Script: {instanceID: 2752}
+    - Class: 114
+      Script: {instanceID: 2836}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/Game.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -74,33 +121,33 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1578}
+      Script: {instanceID: 1442}
     - Class: 114
-      Script: {instanceID: 1688}
+      Script: {instanceID: 1580}
     - Class: 114
-      Script: {instanceID: 1996}
+      Script: {instanceID: 1998}
     - Class: 114
-      Script: {instanceID: 2064}
+      Script: {instanceID: 2066}
     - Class: 114
-      Script: {instanceID: 2288}
+      Script: {instanceID: 2290}
     - Class: 114
-      Script: {instanceID: 2400}
+      Script: {instanceID: 2402}
     - Class: 114
-      Script: {instanceID: 2518}
+      Script: {instanceID: 2520}
     - Class: 114
-      Script: {instanceID: 2564}
+      Script: {instanceID: 2566}
     - Class: 114
-      Script: {instanceID: 2690}
+      Script: {instanceID: 2692}
     - Class: 114
-      Script: {instanceID: 2750}
+      Script: {instanceID: 2752}
     - Class: 114
-      Script: {instanceID: 2782}
+      Script: {instanceID: 2784}
     - Class: 114
-      Script: {instanceID: 2850}
+      Script: {instanceID: 2852}
     - Class: 114
-      Script: {instanceID: 3198}
+      Script: {instanceID: 3200}
     - Class: 114
-      Script: {instanceID: 3534}
+      Script: {instanceID: 3536}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -146,6 +193,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 84
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -155,24 +204,20 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1442}
     - Class: 114
-      Script: {instanceID: 1688}
+      Script: {instanceID: 1690}
     - Class: 114
-      Script: {instanceID: 1996}
+      Script: {instanceID: 2120}
     - Class: 114
-      Script: {instanceID: 2118}
+      Script: {instanceID: 2290}
     - Class: 114
-      Script: {instanceID: 2288}
+      Script: {instanceID: 2402}
     - Class: 114
-      Script: {instanceID: 2400}
+      Script: {instanceID: 2566}
     - Class: 114
-      Script: {instanceID: 2564}
+      Script: {instanceID: 2752}
     - Class: 114
-      Script: {instanceID: 2750}
-    - Class: 114
-      Script: {instanceID: 2834}
+      Script: {instanceID: 2836}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -185,6 +230,10 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 328
+      Script: {instanceID: 0}
+    - Class: 329
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -291,7 +340,7 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
-      Hash: ab9ae5ad7bda6b47b82e66f140fb789f
+      Hash: bf138da819a9e4cb4d05cdc06009464e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -423,10 +472,10 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 2d852ffbb229377166038fe70c0a2f8f
+      Hash: 466a8c7d7290bb3a60216ac3d7f2c024
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: CenterColiderController
+    className: CenterColliderController
   - hash:
       serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
@@ -671,4 +720,5 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Main.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/shims/Desktop/rhythmGameFinal.exe
+  - Assets/Scenes/Credit.unity
+  playerPath: "C:/Users/shims/Documents/\uC720\uB2C8\uD2F0 \uBE4C\uB4DC/rhythmGameFinal.exe"
