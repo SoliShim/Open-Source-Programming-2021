@@ -26,9 +26,6 @@ public class NoteObjectLong : MonoBehaviour
                 gameObject.transform.localScale += new Vector3(0, -0.6f * Time.deltaTime, 0f);
             else
                 gameObject.SetActive(false); ;
-
-                
-                
             //}
         }
     }

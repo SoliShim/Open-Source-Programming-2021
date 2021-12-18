@@ -41,6 +41,17 @@ public class GameManager : MonoBehaviour
     public GameObject resultsScreen;
     public Text badsText, goodsText, perfectsText, missesText, rankText, finalScoreText, comboText;
 
+
+    public int frameRate=60;
+    
+    
+    //게임프레임 제한
+
+    private void Awake()
+    {
+        Application.targetFrameRate = frameRate; //
+    }
+
     void Start()
     {
         instance = this; // 자기 호출
