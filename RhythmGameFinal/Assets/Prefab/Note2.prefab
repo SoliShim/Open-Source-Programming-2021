@@ -119,6 +119,7 @@ MonoBehaviour:
   PerfectEffect: {fileID: 591553575125798035, guid: 9e03570effc35b345aa0839aa6f8203a, type: 3}
   GoodEffect: {fileID: 7049975349424956182, guid: ee926f3aa84344f4f945d8fdc6ae4fa4, type: 3}
   BadEffect: {fileID: 117390456640709588, guid: 8e7a049fb83d4d845a0d13eade8e7998, type: 3}
+  HitEffect: {fileID: 3219514465838568524, guid: b43e60b9e8d15e14b915fd23e531c433, type: 3}
 --- !u!114 &3162579769893835562
 MonoBehaviour:
   m_ObjectHideFlags: 0

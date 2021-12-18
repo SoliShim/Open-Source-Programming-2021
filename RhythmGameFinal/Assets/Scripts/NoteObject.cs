@@ -8,7 +8,7 @@ public class NoteObject : MonoBehaviour
     public bool canBePressed;
     public KeyCode KeyToPress;
 
-    public GameObject PerfectEffect, GoodEffect, BadEffect;
+    public GameObject PerfectEffect, GoodEffect, BadEffect, HitEffect;
 
     void Start()
     {
@@ -23,6 +23,7 @@ public class NoteObject : MonoBehaviour
             {
                 GameManager.instance.NoteHit();
                 gameObject.SetActive(false);
+                Instantiate(HitEffect, transform.position, HitEffect.transform.rotation);
             }
 
             if (Mathf.Abs(transform.position.y) > 2.2)

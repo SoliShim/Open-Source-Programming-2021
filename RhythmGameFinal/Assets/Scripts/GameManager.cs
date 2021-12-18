@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     public GameObject resultsScreen;
     public Text badsText, goodsText, perfectsText, missesText, rankText, finalScoreText, comboText;
 
-
+    public GameObject ComboEffect;
     public int frameRate=60;
     
     
@@ -131,7 +131,7 @@ public class GameManager : MonoBehaviour
             {
                 multiplierTracker = 0;
                 currentMultiplier++;
-                
+                Instantiate(ComboEffect, ComboEffect.transform.position, ComboEffect.transform.rotation);
             }
         }
 
