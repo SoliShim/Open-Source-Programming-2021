@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public int multiplierTracker;
     public int[] multiplierThresholds;
 
+    //점수판정을 위한 Hit 카운팅
     public float totalNotes;
     public float badHits;
     public float goodHits;
@@ -75,7 +76,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            if(!theMusic.isPlaying && !resultsScreen.activeInHierarchy)
+            if(!theMusic.isPlaying && !resultsScreen.activeInHierarchy) //result스크린
             {
                 resultsScreen.SetActive(true);
 
@@ -87,7 +88,7 @@ public class GameManager : MonoBehaviour
 
                 string rankVal = "F";
                 
-                if(perfectHits > 20)
+                if(perfectHits > 20) //퍼펙트Hit 개수에따른 랭크판정
                 {
                     rankVal = "D";
                     if(perfectHits>40)
@@ -127,7 +128,7 @@ public class GameManager : MonoBehaviour
             multiplierTracker++;
             
 
-            if (multiplierThresholds[currentMultiplier - 1] <= multiplierTracker)
+            if (multiplierThresholds[currentMultiplier - 1] <= multiplierTracker) //콤보초기화 및 콤보증가
             {
                 multiplierTracker = 0;
                 currentMultiplier++;

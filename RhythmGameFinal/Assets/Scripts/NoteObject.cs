@@ -27,7 +27,8 @@ public class NoteObject : MonoBehaviour
                 gameObject.SetActive(false);
                 Instantiate(HitEffect, new Vector3(transform.position.x,transform.position.y,-2f), HitEffect.transform.rotation);
             }
-
+            
+            //점수판정코드
             if (Mathf.Abs(transform.position.y) > 2.2)
             {
 

@@ -26,7 +26,7 @@ public class SceneHandler : MonoBehaviour
 
     }
 
-    IEnumerator FadeOut()
+    IEnumerator FadeOut() 
     {
         Panel.gameObject.SetActive(true);
         time = 0f;

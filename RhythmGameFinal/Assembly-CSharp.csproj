@@ -56,7 +56,6 @@
     <Compile Include="Assets\Scripts\EffectObject.cs" />
     <Compile Include="Assets\Scripts\SceneHandler.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\BackgroundVideoController.cs" />
     <Compile Include="Assets\Scripts\NoteMakerNew.cs" />
     <Compile Include="Assets\Scripts\NoteObject.cs" />
     <Compile Include="Assets\Scripts\CenterColliderController.cs" />

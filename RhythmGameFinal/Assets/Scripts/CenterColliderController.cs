@@ -17,7 +17,7 @@ public class CenterColliderController : MonoBehaviour
     }
 
 
-    void Update()   //Miss 시
+    void Update()   //
     {
         if(isCrashed == true)
         {
@@ -37,7 +37,7 @@ public class CenterColliderController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Collider" )
+        if (other.tag == "Collider" ) //Miss판정 구현
         {
             isCrashed = false;
             GameManager.instance.NoteMissed();
