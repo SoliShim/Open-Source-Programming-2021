@@ -87,19 +87,19 @@ public class GameManager : MonoBehaviour
 
                 string rankVal = "F";
                 
-                if(perfectHits > 10)
+                if(perfectHits > 20)
                 {
                     rankVal = "D";
-                    if(perfectHits>20)
+                    if(perfectHits>40)
                     {
                         rankVal = "C";
-                        if (perfectHits > 30)
+                        if (perfectHits > 60)
                         {
                             rankVal = "B";
-                            if (perfectHits > 40)
+                            if (perfectHits > 80)
                             {
                                 rankVal = "A";
-                                if (perfectHits > 45)
+                                if (perfectHits > 100)
                                 {
                                     rankVal = "S";
                                 }
